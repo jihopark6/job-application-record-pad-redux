@@ -1,5 +1,5 @@
 import { redirect } from 'react-router-dom';
-import { updateApplication, deleteApplication } from '../data/applications';
+import { updateApplication, deleteApplication } from '../data/application';
 
 
 export async function editApplicationAction({ request, params }) {
@@ -54,6 +54,6 @@ function validateApplicationFields(fields) {
   if (!fields.date)      errors.date      = 'Application date is required.';
 
   if (Object.keys(errors).length > 0) return errors;
-  
+
   return null;
 }

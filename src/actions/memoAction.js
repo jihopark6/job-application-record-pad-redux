@@ -1,5 +1,5 @@
 import { redirect } from 'react-router-dom';
-import { createMemo } from '../data/memos';
+import { createMemo } from '../data/memo';
 
 export async function memoAction({ request }) {
   const formData = await request.formData();
@@ -12,7 +12,7 @@ export async function memoAction({ request }) {
   if (!applicationId) errors.applicationId = 'Please select a job application.';
   if (!content)       errors.content       = 'Memo content cannot be empty.';
 
-  
+
   if (Object.keys(errors).length > 0) return errors;
 
   createMemo({ applicationId: Number(applicationId), content });

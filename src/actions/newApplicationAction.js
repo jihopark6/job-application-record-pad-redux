@@ -1,5 +1,5 @@
 import { redirect } from 'react-router-dom';
-import { createApplication } from '../data/applications';
+import { createApplication } from '../data/application';
 
 export async function newApplicationAction({ request }) {
   const formData = await request.formData();

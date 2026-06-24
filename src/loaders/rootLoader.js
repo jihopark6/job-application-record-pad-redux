@@ -1,4 +1,4 @@
-import { getApplications } from '../data/applications';
+import { getApplications } from '../data/application';
 
 export async function rootLoader() {
     
