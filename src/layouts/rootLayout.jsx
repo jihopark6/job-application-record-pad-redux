@@ -29,9 +29,11 @@ export default function RootLayout() {
           <Link to="/">Job Application Record Pad</Link>
         </h1>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/new">New</Link>
-          <Link to="/memo">Memo</Link>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/new">New</Link></li>
+            <li><Link to="/memo">Memo</Link></li>
+          </ul>
         </nav>
       </header>
 

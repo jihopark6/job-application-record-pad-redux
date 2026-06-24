@@ -106,8 +106,10 @@ export default function NewApplication() {
         <div className="form-actions">
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Saving…' : 'Save'}
-          </button>
-          <Link to="/">Cancel</Link>
+          </button> &nbsp;
+          <Link className="button" to="/">
+            Cancel
+          </Link>
         </div>
       </Form>
     </div>

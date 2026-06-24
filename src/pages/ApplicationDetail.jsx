@@ -130,21 +130,34 @@ export default function ApplicationDetail() {
         <div className="form-actions">
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Saving…' : 'Save Changes'}
-          </button>
-          <Link to="/">Cancel</Link>
+          </button> &nbsp;
+          <Link className="button" to="/">
+            Cancel
+          </Link>&nbsp;
+          <button type="button" className="danger" onClick={() => {
+            //if (window.confirm('Delete this application?')) {
+              const form = document.getElementById('delete-btn-hidden');
+              
+              form.click();
+           // }
+          }}>
+          Delete
+        </button>
         </div>
       </Form>
 
       {/* DELETE FORM — separate form, same route, different intent */}
       <Form
+        id="delete-form"
+        className="delete-form"
         method="post"
         onSubmit={(e) => {
           if (!window.confirm('Delete this application?')) e.preventDefault();
         }}
       >
         <input type="hidden" name="intent" value="delete" />
-        <button type="submit" className="button-danger" disabled={isSubmitting}>
-          Delete Application
+        <button type="submit" className="button-danger" id="delete-btn-hidden" style={{ display:'none' }} disabled={isSubmitting}>
+          Delete
         </button>
       </Form>
 

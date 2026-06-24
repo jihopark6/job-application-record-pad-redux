@@ -67,10 +67,10 @@ export default function MemoPage() {
               return (
                 <li key={memo.id} className="memo-item">
                   <p className="memo-content">{memo.content}</p>
-                  <footer className="memo-meta">
+                  <div className="memo-meta">
                     <span>{app ? `${app.company} — ${app.job_title}` : 'Unknown application'}</span>
                     <time>{new Date(memo.createdAt).toLocaleString()}</time>
-                  </footer>
+                  </div>
                 </li>
               );
             })}
