@@ -146,7 +146,7 @@ aside #search_input {
     border:1px solid #ccc;
 }
 
-button {
+button, a.button {
     display:inline-block;
     padding:10px 20px;
     background:#696;
@@ -154,12 +154,18 @@ button {
     border:none;
     border-radius:3px;
     cursor:pointer;
+    font-size:1em;
+    line-height:1.5;
 }
 
-button.danger {
+button.danger, a.button.danger {
     background:#f44336;
 }
 
+.delete-form {
+    display: inline;
+    margin-left: 10px;
+}
 
 footer {
     margin-bottom: 0;
