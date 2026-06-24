@@ -8,6 +8,8 @@ export default function RootLayout() {
   const query      = useSelector((state) => state.search.query);
   const navigate   = useNavigate();
 
+  console.log('RootLayout rendered with query:', query);
+
   function handleSearchChange(e) {
     dispatch(setSearchQuery(e.target.value));
   }
