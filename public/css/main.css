@@ -155,3 +155,19 @@ button.danger {
 footer {
     margin-bottom: 0;
 }
+
+.navigation-loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4caf50, #98ff98);
+  animation: loading-slide 1s ease-in-out infinite;
+  z-index: 9999;
+}
+
+@keyframes loading-slide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
